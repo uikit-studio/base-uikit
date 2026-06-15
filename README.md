@@ -48,6 +48,22 @@ Theme first: set the palette + fonts in `design/theme.css`, then build component
 against the tokens, then compose pages. Reference tokens with `var()` —
 `rounded-[var(--radius-lg)]`, not `rounded-[--radius-lg]` (a no‑op in Tailwind v4).
 
+## Agent-ready by default
+
+Every kit built from base must be **agent-ready** — reproducible by another developer's
+AI agent from a single URL. So the finished kit ships, at its repo root:
+
+- **`AGENTS.md`** — "this is the `<name>` design; read `llms.txt` + `design/`, then
+  reproduce these tokens/fonts/radius/components."
+- **`llms.txt`** — a self-contained design brief (prompt, light + dark tokens, fonts,
+  radius, components, pages).
+
+This base already includes starter [`AGENTS.md`](./AGENTS.md) + [`llms.txt`](./llms.txt);
+keep them in sync with `design/` as you build. Once listed, the gallery also generates
+`uikit.studio/kit/<id>/llms.txt` + `manifest.json` from your entry — so
+*"build me a website with this design: uikit.studio/kit/<id>"* just works. See
+[`prompts/build.md`](./prompts/build.md) §7.
+
 ## Then ship it
 
 `npx uikit-studio validate` → push your repo → open a PR to list it at

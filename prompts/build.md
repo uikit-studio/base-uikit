@@ -88,6 +88,19 @@ the components.
 > resolve to `var()` in v4 and silently renders square. The same applies to
 > `bg-[var(--…)]`, `shadow-[var(--…)]`, etc.
 
+### 7. Be AGENT-READY — consumable by URL
+A finished kit must be reproducible by *another* developer's AI agent from a single
+link. Ship, at the repo root:
+- **`AGENTS.md`** — tells any agent "this is the `<name>` design; read `llms.txt` +
+  `design/`, then reproduce these tokens/fonts/radius/components — no recolor."
+- **`llms.txt`** — a self-contained markdown **design brief**: the prompt, the full
+  light + dark token tables, fonts, radius, the component inventory and the pages.
+
+Keep both in sync with `design/` and `uikit.json`. When the kit is listed on
+uikit.studio, the gallery also generates `/kit/<id>/llms.txt` + `/manifest.json` from
+your entry — so *"build me a website with this design: uikit.studio/kit/<id>"* just works.
+(The `uikit new` scaffold already drops starter `AGENTS.md` + `llms.txt` in place.)
+
 ---
 
 ## How this base is wired (use it, don't fight it)
@@ -115,6 +128,7 @@ Everything reads from the tokens, so **theme first**: set the palette + fonts in
 4. EN + AR + RTL + dark all correct.
 5. `npx uikit-studio validate` passes; `uikit.json` describes the real surface.
 6. Authored screenshots (`screenshots/landing.png`, `dashboard.png`, `components.png`).
+7. Agent-ready: `AGENTS.md` + `llms.txt` at the repo root, in sync with `design/`.
 
 Then ship it: see [`prompts/extend.md`](./extend.md) to grow it, and
 <https://uikit.studio/submit> to list it.
