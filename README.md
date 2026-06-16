@@ -78,6 +78,16 @@ at build time and serves them from its own CDN. Ship:
 Names must match the `screenshots[].url` / `video` basenames in your gallery entry.
 See [`prompts/build.md` § Assets](./prompts/build.md#assets-live-in-this-repo).
 
+**Show the clip in this README too** — embed it near the top so it plays on
+GitHub. Use absolute `…/raw/main/…` URLs (relative paths only work for images),
+with `landing.png` as the poster:
+
+```html
+<video src="https://github.com/<owner>/<repo>/raw/main/screenshots/preview.webm" poster="https://github.com/<owner>/<repo>/raw/main/screenshots/landing.png" muted loop playsinline width="100%"></video>
+
+> Video not playing? [▶ Watch the preview ↗](https://github.com/<owner>/<repo>/raw/main/screenshots/preview.webm)
+```
+
 ## Then ship it
 
 `npx uikit-studio validate` → push your repo → open a PR to list it at
