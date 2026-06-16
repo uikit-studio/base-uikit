@@ -64,6 +64,20 @@ keep them in sync with `design/` as you build. Once listed, the gallery also gen
 *"build me a website with this design: uikit.studio/kit/<id>"* just works. See
 [`prompts/build.md`](./prompts/build.md) §7.
 
+## Assets (screenshots + preview clip)
+
+Your screenshots and a short preview video live in **this repo's `screenshots/`**,
+never in the uikit.studio gallery. Once listed, the gallery fetches them from here
+at build time and serves them from its own CDN. Ship:
+
+- `screenshots/landing.png`, `dashboard.png`, `components.png` — page captures.
+- `screenshots/preview.webm` — a **5–10s muted, looping, scrolling** clip (4:3,
+  e.g. 1200×900, ~1–2 MB). It's what the homepage card plays; without it the card
+  falls back to `landing.png`. Record it with any screen recorder.
+
+Names must match the `screenshots[].url` / `video` basenames in your gallery entry.
+See [`prompts/build.md` § Assets](./prompts/build.md#assets-live-in-this-repo).
+
 ## Then ship it
 
 `npx uikit-studio validate` → push your repo → open a PR to list it at

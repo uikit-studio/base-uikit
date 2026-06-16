@@ -20,8 +20,14 @@ from the developer's brief.
 
 **Workflow:** set tokens + fonts in `design/theme.css` → build components against
 the tokens → compose the pages in `react/src/routes/*` (replace the stubs) →
-`npx uikit-studio validate` → write `AGENTS.md` + `llms.txt` → screenshots. Keep
+`npx uikit-studio validate` → write `AGENTS.md` + `llms.txt` → assets. Keep
 `design/tokens.json` in sync with `theme.css`.
+
+**Assets:** put `landing.png` / `dashboard.png` / `components.png` **and** a
+5–10s muted, looping, scrolling `preview.webm` (4:3, ~1–2 MB) in `screenshots/`.
+They stay in this repo — the gallery fetches them at build time and serves them
+from its own CDN; the homepage card plays `preview.webm` (falling back to
+`landing.png`). Filenames must match the entry's `screenshots[].url` / `video`.
 
 Do not stop at a thin version. If a page would look empty next to a real SaaS
 product, it is not finished.

@@ -127,8 +127,28 @@ Everything reads from the tokens, so **theme first**: set the palette + fonts in
 3. Landing and dashboard are both *full* screens (see above) — not placeholders.
 4. EN + AR + RTL + dark all correct.
 5. `npx uikit-studio validate` passes; `uikit.json` describes the real surface.
-6. Authored screenshots (`screenshots/landing.png`, `dashboard.png`, `components.png`).
+6. Assets in `screenshots/` (see [§ Assets](#assets-live-in-this-repo) below):
+   `landing.png`, `dashboard.png`, `components.png` + a `preview.webm` clip.
 7. Agent-ready: `AGENTS.md` + `llms.txt` at the repo root, in sync with `design/`.
+
+## Assets live in THIS repo
+
+Screenshots and a short preview video live in this kit's own `screenshots/` dir —
+**they are never committed to the uikit.studio gallery**. When your kit is listed,
+the gallery pulls them from here at build time (from your `repo` at `main`) and
+serves them from its own CDN. So keep them here, current, and correctly named:
+
+- **`screenshots/landing.png`**, **`dashboard.png`**, **`components.png`** — the
+  page captures referenced by your gallery entry (`screenshots[].url`).
+- **`screenshots/preview.webm`** — a 5–10s **autoplaying, muted, looping** clip
+  that **scrolls** through the kit (a 4:3 frame like 1200×900 matches the gallery
+  card). This is what the homepage card plays; if it's absent the card falls back
+  to `landing.png`. Record it with any screen recorder, or with the gallery's
+  `scripts/record-previews.mjs` (drives the demo and writes the webm here). Keep
+  it small (~1–2 MB) — webm/VP8/VP9, no audio.
+
+Filenames in `screenshots/` must match the basenames in your `uikit.json` /
+gallery entry exactly, since that's how the build-time fetch finds them.
 
 Then ship it: see [`prompts/extend.md`](./extend.md) to grow it, and
 <https://uikit.studio/submit> to list it.
