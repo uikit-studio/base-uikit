@@ -61,7 +61,7 @@
   },
 
   "registry": {
-    "install": "npx uikit-studio new https://github.com/uikit-studio/base-uikit my-kit",
+    "install": "npx uikit-cli new https://github.com/uikit-studio/base-uikit my-kit",
     "components": "registry/index.json"
   }
 }

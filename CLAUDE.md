@@ -15,4 +15,4 @@ Build a **complete, original, production-grade** kit from the developer's brief:
 - **Runnable + bilingual** — `cd react && pnpm dev`; EN + AR + full RTL; dark mode.
 
 Theme first (`design/theme.css` + `design/tokens.json`), then components, then pages
-(`react/src/routes/*` — replace the stubs). Validate with `npx uikit-studio validate`.
+(`react/src/routes/*` — replace the stubs). Validate with `npx uikit-cli validate`.

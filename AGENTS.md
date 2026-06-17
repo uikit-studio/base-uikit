@@ -20,7 +20,7 @@ from the developer's brief.
 
 **Workflow:** set tokens + fonts in `design/theme.css` → build components against
 the tokens → compose the pages in `react/src/routes/*` (replace the stubs) →
-`npx uikit-studio validate` → write `AGENTS.md` + `llms.txt` → assets. Keep
+`npx uikit-cli validate` → write `AGENTS.md` + `llms.txt` → assets. Keep
 `design/tokens.json` in sync with `theme.css`.
 
 **Assets:** put `landing.png` / `dashboard.png` / `components.png` **and** a

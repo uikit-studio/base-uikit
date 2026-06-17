@@ -6,7 +6,7 @@ a **token system**, primitive components) wired up so you (and your AI editor) c
 paint a brand‑new kit on top. Pair it with a prompt; the look is yours.
 
 ```bash
-npx uikit-studio new https://github.com/uikit-studio/base-uikit my-kit
+npx uikit-cli new https://github.com/uikit-studio/base-uikit my-kit
 cd my-kit/react && pnpm install && pnpm dev
 ```
 
@@ -90,7 +90,7 @@ with `landing.png` as the poster:
 
 ## Then ship it
 
-`npx uikit-studio validate` → push your repo → open a PR to list it at
+`npx uikit-cli validate` → push your repo → open a PR to list it at
 <https://uikit.studio/submit>.
 
 ---

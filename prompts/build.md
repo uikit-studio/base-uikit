@@ -126,7 +126,7 @@ Everything reads from the tokens, so **theme first**: set the palette + fonts in
 2. Full design system: light **and** dark, full type scale, every component + states.
 3. Landing and dashboard are both *full* screens (see above) — not placeholders.
 4. EN + AR + RTL + dark all correct.
-5. `npx uikit-studio validate` passes; `uikit.json` describes the real surface.
+5. `npx uikit-cli validate` passes; `uikit.json` describes the real surface.
 6. Assets in `screenshots/` (see [§ Assets](#assets-live-in-this-repo) below):
    `landing.png`, `dashboard.png`, `components.png` + a `preview.webm` clip.
 7. Agent-ready: `AGENTS.md` + `llms.txt` at the repo root, in sync with `design/`.

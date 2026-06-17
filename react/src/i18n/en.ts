@@ -12,7 +12,7 @@ export const en = {
       "Build the full component set — every variant and state",
       "Full pages: landing · pricing · dashboard · components showcase",
       "EN + AR with full RTL, and a dark-mode toggle",
-      "npx uikit-studio validate, then add screenshots",
+      "npx uikit-cli validate, then add screenshots",
     ],
     todo: "Build this page — replace it with a full, on-brand screen. See prompts/build.md.",
     pages: { landing: "Landing", pricing: "Pricing", dashboard: "Dashboard", components: "Components showcase" },
