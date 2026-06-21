@@ -5,6 +5,7 @@ import { Button } from "../components/button";
 import { Container } from "../components/container";
 import { useI18n } from "../i18n";
 import { cn } from "../lib/cn";
+import { isCommerce } from "../lib/kit-type";
 
 export function Layout() {
   const { t, lang, setLang } = useI18n();
@@ -41,10 +42,22 @@ export function Layout() {
           </NavLink>
 
           <nav className="hidden items-center gap-1 md:flex">
-            {navItem("/", t.nav.landing)}
-            {navItem("/pricing", t.nav.pricing)}
-            {navItem("/dashboard", t.nav.dashboard)}
-            {navItem("/components", t.nav.components)}
+            {isCommerce ? (
+              <>
+                {navItem("/", t.commerceNav.storefront)}
+                {navItem("/products", t.commerceNav.products)}
+                {navItem("/product", t.commerceNav.product)}
+                {navItem("/cart", t.commerceNav.cart)}
+                {navItem("/components", t.nav.components)}
+              </>
+            ) : (
+              <>
+                {navItem("/", t.nav.landing)}
+                {navItem("/pricing", t.nav.pricing)}
+                {navItem("/dashboard", t.nav.dashboard)}
+                {navItem("/components", t.nav.components)}
+              </>
+            )}
           </nav>
 
           <div className="flex items-center gap-2">

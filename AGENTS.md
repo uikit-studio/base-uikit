@@ -4,7 +4,16 @@ This repo is **BASE** — a neutral canvas for building a [uikit.studio](https:/
 UI kit. Your job is to turn it into a **complete, original, production-grade kit**
 from the developer's brief.
 
-**Read [`prompts/build.md`](./prompts/build.md) first — it is the spec.** The short version:
+**Pick the kit type first.** Two `type`s (declared in `uikit.json`):
+- **`app`** (default) — SaaS shape: landing · pricing · **dashboard** · components.
+  Spec: **[`prompts/build.md`](./prompts/build.md)**.
+- **`ecommerce`** — storefront shape: storefront · products (search + filter) · product
+  detail · cart/checkout · components (Salla/Zid/Shopify-style, Saudi/Khaliji market).
+  Spec: **[`prompts/build.ecommerce.md`](./prompts/build.ecommerce.md)**. Scaffolded via
+  `uikit new <base> <dir> --type ecommerce`; the app reads `type` from `uikit.json` to
+  render the storefront pages.
+
+**Read the spec for your type first.** The short version (for `app`):
 
 1. **Original** — invent this kit's own structure, sections, and signature
    components. Never ship a recolor of another kit.

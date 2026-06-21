@@ -1,6 +1,7 @@
 export const en = {
   brand: "base",
   nav: { landing: "Home", pricing: "Pricing", dashboard: "Dashboard", components: "Components", cta: "Get started" },
+  commerceNav: { storefront: "Store", products: "Products", product: "Product", cart: "Cart" },
   canvas: {
     eyebrow: "// base canvas",
     title: "Your kit starts here.",
@@ -16,6 +17,12 @@ export const en = {
     ],
     todo: "Build this page — replace it with a full, on-brand screen. See prompts/build.md.",
     pages: { landing: "Landing", pricing: "Pricing", dashboard: "Dashboard", components: "Components showcase" },
+    commercePages: {
+      storefront: "Storefront",
+      products: "Products (search + filter)",
+      product: "Product detail",
+      cart: "Cart / checkout",
+    },
   },
 };
 

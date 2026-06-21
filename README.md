@@ -28,6 +28,23 @@ cd my-kit/react && pnpm install && pnpm dev
 > RTL** + dark · and keep **every value defined & visible** in tokens + README +
 > `uikit.json`.
 
+### Pick a kit type
+
+base builds two kinds of kit, set by `type` in `uikit.json`:
+
+- **`app`** (default) — a SaaS product: landing · pricing · **dashboard** · components.
+  Build it with [`prompts/build.md`](./prompts/build.md).
+- **`ecommerce`** — an online store (Salla / Zid / Shopify–style, tuned for the
+  Saudi/Khaliji market): **storefront · products (search + filter) · product detail ·
+  cart/checkout** · components. Scaffold with `--type ecommerce` and build it with
+  [`prompts/build.ecommerce.md`](./prompts/build.ecommerce.md):
+
+```bash
+npx uikit-cli new https://github.com/uikit-studio/base-uikit my-store --type ecommerce
+```
+
+The runnable app reads `type` from `uikit.json` and renders the matching page set.
+
 Already have a kit and want a new look? **Remix** it instead — see
 [`prompts/remix.md`](./prompts/remix.md).
 

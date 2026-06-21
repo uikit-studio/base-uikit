@@ -7,9 +7,18 @@
 This file is **agent-readable**. Unlike a finished kit, base has **no design to copy** —
 its job is to be *built into* one.
 
+## Kit type
+`uikit.json` carries a `type`: **`app`** (default — landing · pricing · dashboard ·
+components) or **`ecommerce`** (storefront · products (search + filter) · product detail ·
+cart/checkout · components; Salla/Zid/Shopify-style for the Saudi/Khaliji market). The
+runnable app renders the matching page set from `type`. Scaffold an ecommerce kit with
+`uikit new <base> <dir> --type ecommerce`; build it against
+[`prompts/build.ecommerce.md`](./prompts/build.ecommerce.md).
+
 ## If a developer asked you to build a kit here
-1. Read **[`prompts/build.md`](./prompts/build.md)** — the spec for *how* to build it the
-   uikit way (original · full design system · full landing + dense dashboard · responsive ·
+1. Read the spec for the kit's type — **[`prompts/build.md`](./prompts/build.md)** (app) or
+   **[`prompts/build.ecommerce.md`](./prompts/build.ecommerce.md)** (ecommerce) — for *how*
+   to build it the uikit way (original · full design system · full pages · responsive ·
    EN/AR + RTL + dark · every value defined in tokens + README + `uikit.json`).
 2. Read **[`AGENTS.md`](./AGENTS.md)** — the short version of the same rules.
 3. Work theme-first: `design/theme.css` (Tailwind v4 `@theme`) + `design/tokens.json` →

@@ -10,6 +10,7 @@
   "homepage": "https://uikit.studio",
   "repository": "https://github.com/uikit-studio/base-uikit",
 
+  "type": "app",
   "categories": ["starter", "template"],
   "tags": ["base", "starter", "canvas"],
 

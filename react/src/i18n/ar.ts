@@ -3,6 +3,7 @@ import type { Dict } from "./en";
 export const ar: Dict = {
   brand: "base",
   nav: { landing: "الرئيسية", pricing: "الأسعار", dashboard: "لوحة التحكم", components: "المكوّنات", cta: "ابدأ الآن" },
+  commerceNav: { storefront: "المتجر", products: "المنتجات", product: "المنتج", cart: "السلة" },
   canvas: {
     eyebrow: "// لوحة الأساس",
     title: "حقيبتك تبدأ من هنا.",
@@ -18,5 +19,11 @@ export const ar: Dict = {
     ],
     todo: "ابنِ هذه الصفحة — استبدلها بشاشة كاملة بهوية الحقيبة. راجع prompts/build.md.",
     pages: { landing: "الهبوط", pricing: "الأسعار", dashboard: "لوحة التحكم", components: "عرض المكوّنات" },
+    commercePages: {
+      storefront: "واجهة المتجر",
+      products: "المنتجات (بحث + فلترة)",
+      product: "تفاصيل المنتج",
+      cart: "السلة / الدفع",
+    },
   },
 };

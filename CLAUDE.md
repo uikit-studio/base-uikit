@@ -16,3 +16,9 @@ Build a **complete, original, production-grade** kit from the developer's brief:
 
 Theme first (`design/theme.css` + `design/tokens.json`), then components, then pages
 (`react/src/routes/*` — replace the stubs). Validate with `npx uikit-cli validate`.
+
+**Kit type.** This canvas supports two `type`s (set in `uikit.json`):
+- **`app`** (default) — landing · pricing · dashboard · components. Brief: `prompts/build.md`.
+- **`ecommerce`** — storefront · products (search + filter) · product detail · cart/checkout
+  · components. Brief: `prompts/build.ecommerce.md`. Scaffold with
+  `uikit new <base> <dir> --type ecommerce`; the app picks the page set from `uikit.json`.

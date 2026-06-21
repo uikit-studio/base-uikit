@@ -10,6 +10,14 @@ the uikit way, and — most importantly — **how big and how finished it must b
 > *"A fintech kit — deep navy + electric mint, a condensed grotesk, glass panels,
 > data-dense. A trading-desk dashboard and a high-conversion landing."*
 
+> **Choosing your kit type.** This brief covers the default **`app`** type (a SaaS
+> product: landing · pricing · **dashboard** · components). Building an **online store**
+> (Salla / Zid / Shopify–style)? Use **[`build.ecommerce.md`](./build.ecommerce.md)**
+> instead — it swaps the dashboard pages for a **storefront · products (search + filter)
+> · product detail · cart/checkout** set. Scaffold it with
+> `uikit new <base> <dir> --type ecommerce`, which records `type: "ecommerce"` in
+> `uikit.json` (the runnable app then renders the storefront page set automatically).
+
 ---
 
 ## Non-negotiables
